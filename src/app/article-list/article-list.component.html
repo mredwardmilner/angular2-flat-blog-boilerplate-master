@@ -1,0 +1,14 @@
+<div class="debug">(article-list.component.html)</div>
+
+<br>
+
+<!-- [(ngModel)]="searchQuery" creates two-way binding with input value and a variable -->
+<!-- (ngModelChange) makes it run a function when the value is changed -->
+<input [(ngModel)]="searchQuery" (ngModelChange)="search()" type="text" placeholder="Search" />
+
+<br>
+
+<div class="article-listing" *ngFor="let article of articles">
+  <a routerLink="/article/{{article.id}}">{{article.title}}</a>
+  <div>{{article.date}}</div>
+</div>

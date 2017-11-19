@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgModule } from '@angular/core';
 
-import { Article } from '../article';
 import { ArticleService } from '../article.service';
 
 @Component({
@@ -10,24 +9,25 @@ import { ArticleService } from '../article.service';
   styleUrls: ['./article-list.component.scss'],
   providers: [ArticleService]
 })
+
 export class ArticleListComponent implements OnInit {
-  // public articlesCollection; // Entire collection of articles
+  public articlesCollection; // Entire collection of articles
   public articles; // Articles that are currently visible
   public searchQuery;
 
-  // constructor(private ArticleService: ArticleService) {
-  //   // On first load, ask the ArticleService to get all the articles and save them to a variable
-  //   this.ArticleService.getArticles().then(articles => {
-  //     this.articlesCollection = articles;
-  //     this.articles = articles;
-  //     // We have the articles now! Site complete! Not.
-  //     console.log(this.articles);
-  //   });
-  // }
+  constructor(private ArticleService: ArticleService) {
+    // On first load, ask the ArticleService to get all the articles and save them to a variable
+    this.ArticleService.getTheArticles().then(articles => {
+      this.articlesCollection = articles;
+      this.articles = articles;
+      // We have the articles now! Site complete! Not.
+      console.log(this.articles);
+    });
+  }
 
-  articlesCollection: Article[] = [];
+  //articlesCollection: Article[] = [];
   
-      constructor(private articleService: ArticleService) { }
+   //   constructor(private articleService: ArticleService) { }
   
 
   search() {
@@ -44,9 +44,9 @@ export class ArticleListComponent implements OnInit {
     // Add to the results any content matches for the query.. but not if already in the results, erm..
   }
 
-  ngOnInit(): void { // Call the service to get articles inside the Angular ngOnInit() lifecycle hook.
-    this.articleService.getArticles()
-        .then(articles => this.articles = articles.slice(1, 5)); // Specify 4 articles (2nd, 3rd, 4th, and 5th) with the Array.slice method.
-}
- // ngOnInit() {}
+  // ngOnInit(): void { // Call the service to get articles inside the Angular ngOnInit() lifecycle hook.
+  //   this.articleService.getArticles()
+  //       .then(articles => this.articles = articles.slice(1, 5)); // Specify 4 articles (2nd, 3rd, 4th, and 5th) with the Array.slice method.
+ //}
+  ngOnInit() {}
 }

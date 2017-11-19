@@ -1,42 +1,42 @@
 [
   {
     "id": 1,
-    "name": "Delicious Thing",
+    "title": "Delicious Thing",
     "date": "2017-01-30",
     "tags": ["delicious", "things"],
     "content": "This thing truly was delicious; let it be known."
   },
   {
     "id": 2,
-    "name": "Vile Thing",
+    "title": "Vile Thing",
     "date": "2017-02-30",
     "tags": ["vile", "things"],
     "content": "This subsequent thing however, was the vilest of things."
   },
   {
     "id": 3,
-    "name": "Delectable Thing",
+    "title": "Delectable Thing",
     "date": "2017-03-30",
     "tags": ["delectable", "things"],
     "content": "This other thing was, indeed, the most delectable of things."
   },
   {
     "id": 4,
-    "name": "Dejectable Thing",
+    "title": "Dejectable Thing",
     "date": "2017-04-30",
     "tags": ["dejectable", "things"],
     "content": "This other thing was, indeed, the most dejectable of things."
   },
   {
     "id": 5,
-    "name": "Defamatory Thing",
+    "title": "Defamatory Thing",
     "date": "2017-05-30",
     "tags": ["defamatory", "things"],
     "content": "This other thing was, indeed, the most defamatory of things."
   },
   {
     "id": 6,
-    "name": "Domestic Thing",
+    "title": "Domestic Thing",
     "date": "2017-06-30",
     "tags": ["domestic", "things"],
     "content": "This other thing was, indeed, the most domestic of things."
